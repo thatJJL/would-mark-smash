@@ -1,0 +1,183 @@
+<!--
+    index15
+    Variables in the CSS
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Would Mark Smash</title>
+
+    <style>
+
+        /* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+        Used before */
+        :root {
+        /*--main-bg-color: brown;*/
+        --pass-colour: #73AD21;
+
+        /*AE2321 potential smash colour. 0 degress on the HSV colour picker. Dgrees is the hue.*/
+
+        }
+
+        .rounded {
+        border-radius: 25px;
+        /*border: 5px solid #73AD21;*/ /* Before making boarder thicker*/
+        /*border: 8px solid #73AD21;*/
+        /*border: 8px solid #AE2321; */ /*Testing smash colour breifly. I am aware that I may need to change the colour due to w3schools copyright and it may just look better. 23:08pm index15 16/Feb/22. */
+        border: 8px solid var(--pass-colour);
+
+        width: 180px; /* 120px for image + 10px padding on each side so 20px */ /*Now old. Based on 3:4 ratio and height of 240px*/
+        height: 240px;
+        /* want to make squarer so maybe 3:4 ratio. 3 wide by 4 tall. 20:54pm index7(.html). 16/Feb/22.
+
+        Currently 140px width.
+        140x235.88px
+
+        https://www.calculatorsoup.com/calculators/math/ratios.php
+        3 : 4 = 180 : 240
+        Solution:
+
+        Since
+        3 : 4 = X : 240
+
+        Then we know
+        3/4 = X/240
+
+        Multiplying both sides by 240 cancels on the right
+        240 × (3/4) = (X/240) × 240
+        240/ × (3/4) = X
+
+        Then solving for X
+        X = 240 × (3/4)
+        X = 180
+
+        Therefore
+        3 : 4 = 180 : 240
+
+        https://www.calculatorsoup.com/calculators/math/ratios.php?n_1=3&d_1=4&n_2=&d_2=240&action=solve
+
+
+        Padding for others
+        Width of image is 120px.
+        Div is 180px.
+        180-120=60
+        60/2=30
+        30px on each side.
+        */
+
+        /*outline: 5px solid darkblue;*/
+        /*outline: 5px solid #83C525; */
+        /*
+        #73AD21 is HSV 85, 81, 68. (RGB 115, 174, 33)
+        Degrees, %, %
+
+        ((61/100)*255) in 255 format
+        ((61/100)*255) *1.5
+        ( ((61/100)*255) *1.5 )/255 *100 = 91.5
+
+        Trying (#)9CEC2D (outline) - works as a colour but not witht he original green. 85 degrees on the hue worked though too with no other changes, seems like it'd work rather. Didn't implement. 22:45(pm) index12-1 16/Feb/22.
+        Making darker.
+        ( ((61/100)*255) *1.25 )/255 *100= 76.25
+        B5EC2D. Before putting in, it seems too bright.
+        83C525 this is the one it should be and actually seems to work. Something, I think the hue got changed and was then being edited witht eh layers of iteration on top.
+        [Accidently put under the name em css. Moved here. THe above line of comment / comment(-line).]
+        */
+        /* May want https://css-tricks.com/snippets/css/multiple-borders/ . 22:52pm index12-1 16/Feb/22. */
+        }
+
+
+        .centre {
+            /* margin: auto; */
+            text-align: center;
+        }
+
+
+        /*.cell-contents*/
+        .card-content p {
+            margin: 8px;
+            font-size: 24px;
+
+            /*
+            default is with a font size of 16(px) it has a margin of 16px.
+
+            In pixels (px) (tried:)
+            f16, m16
+            f20, m12
+            f24, m8 (haha, mate, 21:41pm 16/Feb/22 index9)
+            */
+
+        }
+
+
+        p, em {
+            font-family: "Lucida Console", "Courier New", monospace; /* https://www.w3schools.com/css/css_font.asp */
+        }
+
+        .name em {
+            /*
+            https://www.w3schools.com/css/css3_buttons.asp
+            https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_hover
+            */
+            /* I did just accidently create ''.card-content em' forgetting this was here. */
+            /* #e7e7e7 */
+            color: #d1d1d1;
+            font-size: 16px;
+            /* margin: 16px; */
+
+            /*
+            Tried:border: 
+            #e7e7e7 - needs to be darker as it's on a white background. THis is at 16px though.
+            Same with font size 18px. Needs to be lighter and feels like it should be smaller. It's not in monospace font though either.
+            Added 'em' to the font family css and it still needs to be smaller and slightly "brighter" so darker if that makes sense. Brighter and lighter aren't the same in this context if that makes sense. Needs more contrast. Odd wording (for and to get to that). [22:01(pm) index10 16/Feb/22.]
+            (#)cacaca at font size 17(px). Feels like it should be lighter and smaller.
+            Tried at 16px and still needs to be a bit lighter.
+            #cfcfcf. Could be lighter.
+            dddddd - needs to be a bit darker.
+            d1d1d1 - works. 22:05(pm) index10 16/Feb/22.
+            */;
+        }
+
+
+        
+        /*
+        .card-content em {
+            color: #00ff00;
+        }
+        */
+
+
+    </style>
+</head>
+<body>
+
+    <!--
+        https://pokemondb.net/pokedex/bulbasaur
+        For getting the images
+
+        <a href="http://pokemondb.net/pokedex/bulbasaur"><img src="https://img.pokemondb.net/artwork/large/bulbasaur.jpg" alt="Bulbasaur"></a>
+    -->
+    
+
+    <div class="rounded"> <!-- One cell or card --> <!-- A card -->
+
+        <!-- <div style="padding:10px;"> -->
+        <div style="padding-top:10px; padding-bottom:10px; padding-bottom:10px;
+        padding-left:30px;
+        padding-right:30px;
+        "
+        class = "card-content"
+        >
+        
+            <p class="centre">#001</p> <!-- Dex number -->
+            <a href="http://pokemondb.net/pokedex/bulbasaur"><img src="https://img.pokemondb.net/artwork/large/bulbasaur.jpg" alt="Bulbasaur" style="width:120px;"></a> <!-- Embedded offical pokemon art -->
+            <!-- <em class="centre name" style="text-align: center;">Bulbasaur</em> -->
+            <p class="centre name" style="text-align: center;"> <em>Bulbasaur</em> </p>
+            <p class="centre">Pass</p>
+            <!-- <p class="centre" style="color:#73AD21">Pass</p> -->
+
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,6 +1,6 @@
 <!--
-    index21
-    Responsive to on/mouse hover
+    index22
+    Spans or inline divs.
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -13,96 +13,98 @@
         /* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
         Used before */
         :root {
-        /*--pass-colour: #73AD21; */
-		/*AE2321 potential smash colour. 0 degress on the HSV colour picker. Dgrees is the hue.*/
-		/*hsl(85, 68%, 40%)*/
-		
-		/*hsl(0, 68%, 40%)
-		#ab2121
-		*/
-		--pass-colour: 115, 173, 33; /* https://blog.jim-nielsen.com/2019/generating-shades-of-color-using-css-variables/ */
-		/*--pass-colour-hover: hsl(85, 68%, 50%);*/
-		
-		--smash-colour-red: 171, 33, 33; /*hsl(0, 68%, 40%);*/ /*In case red isn't neccessarily wanted. The association etc. being not good and so unintended*/
-		
-		--smash-colour-blue: 33, 137, 171; /*hsl(195, 68%, 40%);*/ /*180 could work too, 210 too.*/
-		
-		--undefined-colour: 209, 209, 209; /*#d1d1d1*;*/ /*Same as em element text of the cards. TODO 14:06pm i19, turn this into a variable.*/
+			/*--pass-colour: #73AD21; */
+			/*AE2321 potential smash colour. 0 degress on the HSV colour picker. Dgrees is the hue.*/
+			/*hsl(85, 68%, 40%)*/
+			
+			/*hsl(0, 68%, 40%)
+			#ab2121
+			*/
+			--pass-colour: 115, 173, 33; /* https://blog.jim-nielsen.com/2019/generating-shades-of-color-using-css-variables/ */
+			/*--pass-colour-hover: hsl(85, 68%, 50%);*/
+			
+			--smash-colour-red: 171, 33, 33; /*hsl(0, 68%, 40%);*/ /*In case red isn't neccessarily wanted. The association etc. being not good and so unintended*/
+			
+			--smash-colour-blue: 33, 137, 171; /*hsl(195, 68%, 40%);*/ /*180 could work too, 210 too.*/
+			
+			--undefined-colour: 209, 209, 209; /*#d1d1d1*;*/ /*Same as em element text of the cards. TODO 14:06pm i19, turn this into a variable.*/
 
-        
+			
 
         }
 
         .rounded {
-        border-radius: 25px;
-        /*border: 5px solid #73AD21;*/ /* Before making boarder thicker*/
-        /*border: 8px solid #73AD21;*/
-        /*border: 8px solid #AE2321; */ /*Testing smash colour breifly. I am aware that I may need to change the colour due to w3schools copyright and it may just look better. 23:08pm index15 16/Feb/22. */
-        border: 8px solid rgb(var(--pass-colour));
+			border-radius: 25px;
+			/*border: 5px solid #73AD21;*/ /* Before making boarder thicker*/
+			/*border: 8px solid #73AD21;*/
+			/*border: 8px solid #AE2321; */ /*Testing smash colour breifly. I am aware that I may need to change the colour due to w3schools copyright and it may just look better. 23:08pm index15 16/Feb/22. */
+			border: 8px solid rgb(var(--pass-colour));
 
-        width: 180px; /* 120px for image + 10px padding on each side so 20px */ /*Now old. Based on 3:4 ratio and height of 240px*/
-        height: 240px;
-        /* want to make squarer so maybe 3:4 ratio. 3 wide by 4 tall. 20:54pm index7(.html). 16/Feb/22.
+			width: 180px; /* 120px for image + 10px padding on each side so 20px */ /*Now old. Based on 3:4 ratio and height of 240px*/
+			height: 240px;
+			/* want to make squarer so maybe 3:4 ratio. 3 wide by 4 tall. 20:54pm index7(.html). 16/Feb/22.
 
-        Currently 140px width.
-        140x235.88px
+			Currently 140px width.
+			140x235.88px
 
-        https://www.calculatorsoup.com/calculators/math/ratios.php
-        3 : 4 = 180 : 240
-        Solution:
+			https://www.calculatorsoup.com/calculators/math/ratios.php
+			3 : 4 = 180 : 240
+			Solution:
 
-        Since
-        3 : 4 = X : 240
+			Since
+			3 : 4 = X : 240
 
-        Then we know
-        3/4 = X/240
+			Then we know
+			3/4 = X/240
 
-        Multiplying both sides by 240 cancels on the right
-        240 × (3/4) = (X/240) × 240
-        240/ × (3/4) = X
+			Multiplying both sides by 240 cancels on the right
+			240 × (3/4) = (X/240) × 240
+			240/ × (3/4) = X
 
-        Then solving for X
-        X = 240 × (3/4)
-        X = 180
+			Then solving for X
+			X = 240 × (3/4)
+			X = 180
 
-        Therefore
-        3 : 4 = 180 : 240
+			Therefore
+			3 : 4 = 180 : 240
 
-        https://www.calculatorsoup.com/calculators/math/ratios.php?n_1=3&d_1=4&n_2=&d_2=240&action=solve
+			https://www.calculatorsoup.com/calculators/math/ratios.php?n_1=3&d_1=4&n_2=&d_2=240&action=solve
 
 
-        Padding for others
-        Width of image is 120px.
-        Div is 180px.
-        180-120=60
-        60/2=30
-        30px on each side.
-        */
+			Padding for others
+			Width of image is 120px.
+			Div is 180px.
+			180-120=60
+			60/2=30
+			30px on each side.
+			*/
 
-        /*outline: 5px solid darkblue;*/
-        /*outline: 5px solid #83C525; */
-        /*
-        #73AD21 is HSV 85, 81, 68. (RGB 115, 174, 33)
-        Degrees, %, %
+			/*outline: 5px solid darkblue;*/
+			/*outline: 5px solid #83C525; */
+			/*
+			#73AD21 is HSV 85, 81, 68. (RGB 115, 174, 33)
+			Degrees, %, %
 
-        ((61/100)*255) in 255 format
-        ((61/100)*255) *1.5
-        ( ((61/100)*255) *1.5 )/255 *100 = 91.5
+			((61/100)*255) in 255 format
+			((61/100)*255) *1.5
+			( ((61/100)*255) *1.5 )/255 *100 = 91.5
 
-        Trying (#)9CEC2D (outline) - works as a colour but not witht he original green. 85 degrees on the hue worked though too with no other changes, seems like it'd work rather. Didn't implement. 22:45(pm) index12-1 16/Feb/22.
-        Making darker.
-        ( ((61/100)*255) *1.25 )/255 *100= 76.25
-        B5EC2D. Before putting in, it seems too bright.
-        83C525 this is the one it should be and actually seems to work. Something, I think the hue got changed and was then being edited witht eh layers of iteration on top.
-        [Accidently put under the name em css. Moved here. THe above line of comment / comment(-line).]
-        */
-        /* May want https://css-tricks.com/snippets/css/multiple-borders/ . 22:52pm index12-1 16/Feb/22. */
-        
-		
-		/*box-shadow: 5px 10px;*/
-		/*box-shadow: 5px 5px;*/
-		
-		transition: 0.25s; /*0.2s*//*0.3s;*/
+			Trying (#)9CEC2D (outline) - works as a colour but not witht he original green. 85 degrees on the hue worked though too with no other changes, seems like it'd work rather. Didn't implement. 22:45(pm) index12-1 16/Feb/22.
+			Making darker.
+			( ((61/100)*255) *1.25 )/255 *100= 76.25
+			B5EC2D. Before putting in, it seems too bright.
+			83C525 this is the one it should be and actually seems to work. Something, I think the hue got changed and was then being edited witht eh layers of iteration on top.
+			[Accidently put under the name em css. Moved here. THe above line of comment / comment(-line).]
+			*/
+			/* May want https://css-tricks.com/snippets/css/multiple-borders/ . 22:52pm index12-1 16/Feb/22. */
+			
+			
+			/*box-shadow: 5px 10px;*/
+			/*box-shadow: 5px 5px;*/
+			
+			transition: 0.25s; /*0.2s*//*0.3s;*/
+			
+			display: inline-block
 		} /* End of rounded class*/
 		
 
@@ -252,11 +254,52 @@
     </div>
 	
 	
-	<div class="rounded smash">
-	</div>
 	
-	<div class="rounded unknown">
-	</div>
+	
+	
+	
+	<div class="rounded smash"> <!-- One cell or card --> <!-- A card -->
+
+        <!-- <div style="padding:10px;"> -->
+        <div style="
+		padding-top:10px; padding-bottom:10px; padding-bottom:10px;
+        padding-left:30px;
+        padding-right:30px;
+        "
+        class = "card-content"
+        >
+        
+            <p class="centre">#001</p> <!-- Dex number -->
+            <a href="http://pokemondb.net/pokedex/bulbasaur"><img src="https://img.pokemondb.net/artwork/large/bulbasaur.jpg" alt="Bulbasaur" style="width:120px;"></a> <!-- Embedded offical pokemon art -->
+            <!-- <em class="centre name" style="text-align: center;">Bulbasaur</em> -->
+            <p class="centre name" style="text-align: center;"> <em>Smash test</em> </p>
+            <p class="centre">Pass</p>
+            <!-- <p class="centre" style="color:#73AD21">Pass</p> -->
+
+        </div>
+    </div>
+	
+	
+	<div class="rounded unknown"> <!-- One cell or card --> <!-- A card -->
+
+        <!-- <div style="padding:10px;"> -->
+        <div style="
+		padding-top:10px; padding-bottom:10px; padding-bottom:10px;
+        padding-left:30px;
+        padding-right:30px;
+        "
+        class = "card-content"
+        >
+        
+            <p class="centre">#001</p> <!-- Dex number -->
+            <a href="http://pokemondb.net/pokedex/bulbasaur"><img src="https://img.pokemondb.net/artwork/large/bulbasaur.jpg" alt="Bulbasaur" style="width:120px;"></a> <!-- Embedded offical pokemon art -->
+            <!-- <em class="centre name" style="text-align: center;">Bulbasaur</em> -->
+            <p class="centre name" style="text-align: center;"> <em>Unknown t.</em> </p>
+            <p class="centre">Pass</p>
+            <!-- <p class="centre" style="color:#73AD21">Pass</p> -->
+
+        </div>
+    </div>
     
 </body>
 </html>

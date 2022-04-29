@@ -1,5 +1,5 @@
 <!--
-    index23
+    index23.1
     Generating. JS.
 -->
 <!DOCTYPE html>
@@ -307,16 +307,35 @@
 	<ul id="myList"></ul>
     <script>
 	//https://www.geeksforgeeks.org/how-to-creating-html-list-from-javascript-array/
-      let data = ["Ram", "Shyam", "Sita", "Gita"];
-  
-      let list = document.getElementById("myList");
-  
-      data.forEach((item) => {
-        let li = document.createElement("li");
-        li.innerText = item;
-        list.appendChild(li);
-      });
-    </script>
+    //let data = ["Ram", "Shyam", "Sita", "Gita"];
+	
+	//let data = [["a","b"], "Shyam", "Sita", "Gita"];
+	let data = [
+	["Bulbasaur", false, "http://pokemondb.net/pokedex/bulbasaur"], 
+	"Shyam", "Sita", "Gita"];
+	//http://pokemondb.net/pokedex/___NAME___
+	/*[Name, 
+	true, false or null
+	maybe the link to the image
+	]
+	*/
+	let list = document.getElementById("myList");
+	
+	data.forEach((item) => {
+		let li = document.createElement("li");
+		li.innerText = item;
+		list.appendChild(li);
+	});
+	
+	data.forEach((item) => {
+		//let li = document.createElement("p");
+		//li.innerText = item;
+		
+		/*https://sebhastian.com/javascript-echo/*/
+		document.write("<p>" + item +"</p>" )
+		
+	});
+	</script>
     
 </body>
 </html>

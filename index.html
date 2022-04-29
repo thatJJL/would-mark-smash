@@ -1,5 +1,5 @@
 <!--
-    index23.1
+    index24
     Generating. JS.
 -->
 <!DOCTYPE html>
@@ -27,7 +27,7 @@
 			
 			--smash-colour-blue: 33, 137, 171; /*hsl(195, 68%, 40%);*/ /*180 could work too, 210 too.*/
 			
-			--undefined-colour: 209, 209, 209; /*#d1d1d1*;*/ /*Same as em element text of the cards. TODO 14:06pm i19, turn this into a variable.*/
+			--unknown-colour: 209, 209, 209; /*#d1d1d1*;*/ /*Same as em element text of the cards. TODO 14:06pm i19, turn this into a variable.*/
 
 			
 
@@ -190,9 +190,9 @@
 		
 		
 		.rounded.unknown {
-			border: 8px solid rgb(var(--undefined-colour));
+			border: 8px solid rgb(var(--unknown-colour));
 		}
-		.rounded.unknown:hover { border-color: rgba(var(--undefined-colour), 0.8); }
+		.rounded.unknown:hover { border-color: rgba(var(--unknown-colour), 0.8); }
 		
 		
 		.rounded:hover {
@@ -319,6 +319,16 @@
 	maybe the link to the image
 	]
 	*/
+	
+	let dataTwo = [
+	["Bulbasaur", true, "http://pokemondb.net/pokedex/bulbasaur"], 
+	["Bulbasaur", false, "http://pokemondb.net/pokedex/bulbasaur"], 
+	["Bulbasaur", null, "http://pokemondb.net/pokedex/bulbasaur"], 
+	];
+	
+	
+	
+	
 	let list = document.getElementById("myList");
 	
 	data.forEach((item) => {
@@ -327,12 +337,131 @@
 		list.appendChild(li);
 	});
 	
+	
+	
+	
+	/*
+	<div class="rounded smash"> <!-- One cell or card --> <!-- A card -->
+
+        <!-- <div style="padding:10px;"> -->
+        <div style="
+		padding-top:10px; padding-bottom:10px; padding-bottom:10px;
+        padding-left:30px;
+        padding-right:30px;
+        "
+        class = "card-content"
+        >
+        
+            <p class="centre">#001</p> <!-- Dex number -->
+            <a href="http://pokemondb.net/pokedex/bulbasaur"><img src="https://img.pokemondb.net/artwork/large/bulbasaur.jpg" alt="Bulbasaur" style="width:120px;"></a> <!-- Embedded offical pokemon art -->
+            <!-- <em class="centre name" style="text-align: center;">Bulbasaur</em> -->
+            <p class="centre name" style="text-align: center;"> <em>Smash test</em> </p>
+            <p class="centre">Pass</p>
+            <!-- <p class="centre" style="color:#73AD21">Pass</p> -->
+
+        </div>
+    </div>
+	*/
+	/*
+	<div class="rounded smash"> <!-- One cell or card --> <!-- A card -->
+
+        <div style="
+		padding-top:10px; padding-bottom:10px; padding-bottom:10px;
+        padding-left:30px;
+        padding-right:30px;
+        "
+        class = "card-content"
+        >
+        
+            <p class="centre">#001</p> <!-- Dex number -->
+            <a href="http://pokemondb.net/pokedex/bulbasaur"><img src="https://img.pokemondb.net/artwork/large/bulbasaur.jpg" alt="Bulbasaur" style="width:120px;"></a> <!-- Embedded offical pokemon art -->
+            <p class="centre name" style="text-align: center;"> <em>Smash test</em> </p>
+            <p class="centre">Pass</p>
+			
+
+        </div>
+    </div>
+	*/
+	/*
+	<div class="rounded smash"> <!-- One cell or card --> <!-- A card --><div style="padding-top:10px; padding-bottom:10px; padding-bottom:10px;padding-left:30px;padding-right:30px;"class = "card-content"><p class="centre">#001</p> <!-- Dex number --><a href="http://pokemondb.net/pokedex/bulbasaur"><img src="https://img.pokemondb.net/artwork/large/bulbasaur.jpg" alt="Bulbasaur" style="width:120px;"></a> <!-- Embedded offical pokemon art --><p class="centre name" style="text-align: center;"> <em>Smash test</em> </p><p class="centre">Pass</p></div></div>
+	*/
+	/*
+	<div class="rounded smash"> <!-- One cell or card --> <!-- A card -->        <!-- <div style="padding:10px;"> -->        <div style="		padding-top:10px; padding-bottom:10px; padding-bottom:10px;        padding-left:30px;        padding-right:30px;        "        class = "card-content"        >                    <p class="centre">#001</p> <!-- Dex number -->            <a href="http://pokemondb.net/pokedex/bulbasaur"><img src="https://img.pokemondb.net/artwork/large/bulbasaur.jpg" alt="Bulbasaur" style="width:120px;"></a> <!-- Embedded offical pokemon art -->            <!-- <em class="centre name" style="text-align: center;">Bulbasaur</em> -->            <p class="centre name" style="text-align: center;"> <em>Smash test</em> </p>            <p class="centre">Pass</p>            <!-- <p class="centre" style="color:#73AD21">Pass</p> -->        </div>    </div>
+	*/
+	
+	
+	
 	data.forEach((item) => {
 		//let li = document.createElement("p");
 		//li.innerText = item;
 		
 		/*https://sebhastian.com/javascript-echo/*/
-		document.write("<p>" + item +"</p>" )
+		//document.write("<p>" + item +"</p>" )
+		
+		//document.write('<p>' + item +'</p>' )
+		
+		/*
+		document.write('<div class="rounded smash"> <!-- One cell or card --> <!-- A card -->' +
+						'<div style="' +
+						'padding-top:10px; padding-bottom:10px; padding-bottom:10px;' +
+						'padding-left:30px;' +
+						'padding-right:30px;' +
+						'padding-right:30px;' +
+						'"' +
+						'' +
+						'' +
+						'' +
+						'' +
+						'' +
+		
+		
+		)
+		*/
+		
+		document.write("<div class='rounded smash'> <!-- One cell or card --> <!-- A card -->        <!-- <div style='padding:10px;'> -->        <div style='		padding-top:10px; padding-bottom:10px; padding-bottom:10px;        padding-left:30px;        padding-right:30px;        '        class = 'card-content'        >                    <p class='centre'>#001</p> <!-- Dex number -->            <a href='http://pokemondb.net/pokedex/bulbasaur'><img src='https://img.pokemondb.net/artwork/large/bulbasaur.jpg' alt='Bulbasaur' style='width:120px;'></a> <!-- Embedded offical pokemon art -->            <!-- <em class='centre name' style='text-align: center;'>Bulbasaur</em> -->            <p class='centre name' style='text-align: center;'> <em>Smash test</em> </p>            <p class='centre'>Pass</p>            <!-- <p class='centre' style='color:#73AD21'>Pass</p> -->        </div>    </div> ")	
+		//Replaced " with '
+		
+	});
+	
+	document.write("<p>More actual generation (\"closer to the actual generation\" generation</p>");
+	
+	dataTwo.forEach((item) => {
+	
+		contentsData = [];
+		//["Bulbasaur", false, "http://pokemondb.net/pokedex/bulbasaur"], 
+		contentsData.push(item[0]);
+		
+		//Index 1 of currentData //currentData[1] - Status text
+		if (item[1] == true){
+			contentsData.push("Pass");}
+		else if (item[1] == false) {
+			contentsData.push("Smash"); }
+		else if (item[1] == null) {
+			contentsData.push("Unknown"); }
+			
+		
+		//currentData[2] - class text
+		if (item[1] == true) {
+			contentsData.push("pass"); }
+		else if (item[1] == false) {
+			contentsData.push("smash"); }
+		else if (item[1] == null) {
+			contentsData.push("unknown"); }
+			
+			
+		//currentData[3] - image link
+		contentsData.push(item[2]);
+		
+		
+		console.log(contentsData);
+		
+		
+		//document.write("<div class='rounded smash'> <!-- One cell or card --> <!-- A card -->        <!-- <div style='padding:10px;'> -->        <div style='		padding-top:10px; padding-bottom:10px; padding-bottom:10px;        padding-left:30px;        padding-right:30px;        '        class = 'card-content'        >                    <p class='centre'>#001</p> <!-- Dex number -->            <a href='http://pokemondb.net/pokedex/bulbasaur'><img src='https://img.pokemondb.net/artwork/large/bulbasaur.jpg' alt='Bulbasaur' style='width:120px;'></a> <!-- Embedded offical pokemon art -->            <!-- <em class='centre name' style='text-align: center;'>Bulbasaur</em> -->            <p class='centre name' style='text-align: center;'> <em>Smash test</em> </p>            <p class='centre'>Pass</p>            <!-- <p class='centre' style='color:#73AD21'>Pass</p> -->        </div>    </div> ")	
+		//document.write("<div class='rounded smash'> <!-- One cell or card --> <!-- A card -->        <!-- <div style='padding:10px;'> -->        <div style='		padding-top:10px; padding-bottom:10px; padding-bottom:10px;        padding-left:30px;        padding-right:30px;        '        class = 'card-content'        >                    <p class='centre'>#001</p> <!-- Dex number -->            <a href='" + contentsData[2] + "'><img src='https://img.pokemondb.net/artwork/large/bulbasaur.jpg' alt='" + contentsData[0] + "' style='width:120px;'></a> <!-- Embedded offical pokemon art -->            <!-- <em class='centre name' style='text-align: center;'>" + contentsData[0] + "</em> -->            <p class='centre name' style='text-align: center;'> <em>Smash test</em> </p>            <p class='centre'>" + currentData[1] + "</p>            <!-- <p class='centre' style='color:#73AD21'>" + currentData[1] + "</p> -->        </div>    </div> ")	
+		//document.write("<div class='rounded smash'> <!-- One cell or card --> <!-- A card -->        <!-- <div style='padding:10px;'> -->        <div style='		padding-top:10px; padding-bottom:10px; padding-bottom:10px;        padding-left:30px;        padding-right:30px;        '        class = 'card-content'        >                    <p class='centre'>#001</p> <!-- Dex number -->            <a href='http://pokemondb.net/pokedex/bulbasaur'><img src='https://img.pokemondb.net/artwork/large/bulbasaur.jpg' alt='Bulbasaur' style='width:120px;'></a> <!-- Embedded offical pokemon art -->            <!-- <em class='centre name' style='text-align: center;'>Bulbasaur</em> -->            <p class='centre name' style='text-align: center;'> <em>Smash test</em> </p>            <p class='centre'>" + contentsData[1] + "</p>            <!-- <p class='centre' style='color:#73AD21'>" + contentsData[1] + "</p> -->        </div>    </div> ")	
+		//document.write("<div class='rounded " + contentsData[2] + "'> <!-- One cell or card --> <!-- A card -->        <!-- <div style='padding:10px;'> -->        <div style='		padding-top:10px; padding-bottom:10px; padding-bottom:10px;        padding-left:30px;        padding-right:30px;        '        class = 'card-content'        >                    <p class='centre'>#001</p> <!-- Dex number -->            <a href='http://pokemondb.net/pokedex/bulbasaur'><img src='https://img.pokemondb.net/artwork/large/bulbasaur.jpg' alt='Bulbasaur' style='width:120px;'></a> <!-- Embedded offical pokemon art -->            <!-- <em class='centre name' style='text-align: center;'>Bulbasaur</em> -->            <p class='centre name' style='text-align: center;'> <em>Smash test</em> </p>            <p class='centre'>" + contentsData[1] + "</p>            <!-- <p class='centre' style='color:#73AD21'>" + contentsData[1] + "</p> -->        </div>    </div> ")	
+		document.write("<div class='rounded " + contentsData[2] + "'> <!-- One cell or card --> <!-- A card -->        <!-- <div style='padding:10px;'> -->        <div style='		padding-top:10px; padding-bottom:10px; padding-bottom:10px;        padding-left:30px;        padding-right:30px;        '        class = 'card-content'        >                    <p class='centre'>#001</p> <!-- Dex number -->            <a href='http://pokemondb.net/pokedex/bulbasaur'><img src='https://img.pokemondb.net/artwork/large/bulbasaur.jpg' alt='Bulbasaur' style='width:120px;'></a> <!-- Embedded offical pokemon art -->            <!-- <em class='centre name' style='text-align: center;'>Bulbasaur</em> -->            <p class='centre name' style='text-align: center;'> <em>" + contentsData[0] + "</em> </p>            <p class='centre'>" + contentsData[1] + "</p>            <!-- <p class='centre' style='color:#73AD21'>" + contentsData[1] + "</p> -->        </div>    </div> ")	
+		//Replaced " with '
 		
 	});
 	</script>

@@ -1,6 +1,6 @@
 <!--
-    index22
-    Spans or inline divs.
+    index23
+    Generating. JS.
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -300,6 +300,23 @@
 
         </div>
     </div>
+	
+	
+	
+	
+	<ul id="myList"></ul>
+    <script>
+	//https://www.geeksforgeeks.org/how-to-creating-html-list-from-javascript-array/
+      let data = ["Ram", "Shyam", "Sita", "Gita"];
+  
+      let list = document.getElementById("myList");
+  
+      data.forEach((item) => {
+        let li = document.createElement("li");
+        li.innerText = item;
+        list.appendChild(li);
+      });
+    </script>
     
 </body>
 </html>

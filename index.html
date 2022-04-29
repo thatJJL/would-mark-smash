@@ -1,6 +1,6 @@
 <!--
-    index19 - working from index15 as index18 was lost.
-    Variables in the CSS
+    index20
+    Responsive to on/mouse hover
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -20,9 +20,13 @@
 		/*hsl(0, 68%, 40%)
 		#ab2121
 		*/
+		--pass-colour-hover: hsl(85, 68%, 50%); 
+		
 		--smash-colour-red: hsl(0, 68%, 40%); /*In case red isn't neccessarily wanted. The association etc. being not good and so unintended*/
+		
 		--smash-colour-blue: hsl(195, 68%, 40%); /*180 could work too, 210 too.*/
-		--smash-undefined: #d1d1d1; /*Same as em element text of the cards. TODO 14:06pm i19, turn this into a variable.*/
+		
+		--undefined-colour: #d1d1d1; /*Same as em element text of the cards. TODO 14:06pm i19, turn this into a variable.*/
 
         
 
@@ -92,7 +96,16 @@
         [Accidently put under the name em css. Moved here. THe above line of comment / comment(-line).]
         */
         /* May want https://css-tricks.com/snippets/css/multiple-borders/ . 22:52pm index12-1 16/Feb/22. */
-        }
+        
+		
+		/*box-shadow: 5px 10px;*/
+		/*box-shadow: 5px 5px;*/
+		}
+		
+		
+		.rounded:hover {
+			/*box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1); / * https://stackoverflow.com/questions/16178382/css-lighten-an-element-on-hover*/
+		}
 
 
         .centre {
@@ -116,7 +129,12 @@
             */
 
         }
-
+		
+		
+		.card-content:hover {
+			/*background-color: yellow;*/
+		}
+		
 
         p, em {
             font-family: "Lucida Console", "Courier New", monospace; /* https://www.w3schools.com/css/css_font.asp */
@@ -159,8 +177,14 @@
 			border: 8px solid var(--pass-colour);
 			
 			/*Testing*/
-			/*border: 8px solid #ff0066;*/ 
+			/*border: 8px solid #ff0066;*/
+			
 		}
+		/*
+		.rounded.pass:hover {
+			/*border-color: var(--pass-colour-hover)*/
+		}
+		*/
 		
 		
 		.rounded.smash {
@@ -171,6 +195,22 @@
 		
 		.rounded.unknown {
 			border: 8px solid var(--smash-colour-red);
+		}
+		
+		
+		.rounded:hover {
+			/*https://codesalad.dev/blog/color-manipulation-with-css-variables-and-hsl-16*/
+			/*border-colour: darken( var(--pass-colour-hover), 10% );*/ /*Pass' colour*/
+			/*border-colour: calc( darken( #fff, 10% ) );*/
+			/*border-color: yellow;*/
+			/*border-color: darken( var(--pass-colour-hover), 10% );*/ /*Pass' colour*/
+			/*border-color: darken( var(--pass-colour-hover), -10% );*/ /*Pass' colour*/
+			/*filter: brightness(85%);*/
+			/*filter: brightness(105%)*/
+			/*https://newbedev.com/css-pure-css-lighten-background-color-from-var-code-example*/
+			/*background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));*/
+			
+			/* https://blog.jim-nielsen.com/2019/generating-shades-of-color-using-css-variables/ */
 		}
 
     </style>

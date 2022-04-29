@@ -1,5 +1,5 @@
 <!--
-    index15
+    index19 - working from index15 as index18 was lost.
     Variables in the CSS
 -->
 <!DOCTYPE html>
@@ -13,10 +13,18 @@
         /* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
         Used before */
         :root {
-        /*--main-bg-color: brown;*/
-        --pass-colour: #73AD21;
+        --pass-colour: #73AD21; 
+		/*AE2321 potential smash colour. 0 degress on the HSV colour picker. Dgrees is the hue.*/
+		/*hsl(85, 68%, 40%)*/
+		
+		/*hsl(0, 68%, 40%)
+		#ab2121
+		*/
+		--smash-colour-red: hsl(0, 68%, 40%); /*In case red isn't neccessarily wanted. The association etc. being not good and so unintended*/
+		--smash-colour-blue: hsl(195, 68%, 40%); /*180 could work too, 210 too.*/
+		--smash-undefined: #d1d1d1; /*Same as em element text of the cards. TODO 14:06pm i19, turn this into a variable.*/
 
-        /*AE2321 potential smash colour. 0 degress on the HSV colour picker. Dgrees is the hue.*/
+        
 
         }
 
@@ -145,7 +153,25 @@
             color: #00ff00;
         }
         */
-
+		
+		
+		.rounded.pass { /* https://stackoverflow.com/questions/5196583/target-elements-with-multiple-classes-within-one-rule */
+			border: 8px solid var(--pass-colour);
+			
+			/*Testing*/
+			/*border: 8px solid #ff0066;*/ 
+		}
+		
+		
+		.rounded.smash {
+			border: 8px solid var(--smash-colour-red);
+			/*border: 8px solid var(--smash-colour-blue);*/
+		}
+		
+		
+		.rounded.unknown {
+			border: 8px solid var(--smash-colour-red);
+		}
 
     </style>
 </head>
@@ -159,10 +185,11 @@
     -->
     
 
-    <div class="rounded"> <!-- One cell or card --> <!-- A card -->
+    <div class="rounded pass"> <!-- One cell or card --> <!-- A card -->
 
         <!-- <div style="padding:10px;"> -->
-        <div style="padding-top:10px; padding-bottom:10px; padding-bottom:10px;
+        <div style="
+		padding-top:10px; padding-bottom:10px; padding-bottom:10px;
         padding-left:30px;
         padding-right:30px;
         "
